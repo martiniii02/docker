@@ -1,0 +1,8 @@
+version: '3'
+services:
+  dlna:
+    image: linuxserver/dlna
+    container_name: dlna
+    ports:
+      - "8200:8200"
+    restart: always
