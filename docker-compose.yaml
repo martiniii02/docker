@@ -1,8 +1,11 @@
 version: '3'
 services:
   dlna:
-    image: linuxserver/dlna
-    container_name: dlna
-    ports:
-      - "8200:8200"
-    restart: always
+    build:
+      container_name: minidlna_server
+      volumes: 
+        - ./data:/opt
+      ports:
+        - "8200:8200"
+        - "554:554"
+        - "1900:1900"
